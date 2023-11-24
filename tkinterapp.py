@@ -1,4 +1,5 @@
 import tkinter
+import sys
 from PIL import ImageTk, Image
 
 window = tkinter.Tk()
@@ -9,6 +10,7 @@ def displayplot():
     # Load the image
     global photo
     image = Image.open("plot.png")
+    image.thumbnail([450, sys.maxsize], Image.LANCZOS)
     photo = ImageTk.PhotoImage(image)
 
     # Label widget to display the image
