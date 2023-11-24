@@ -19,11 +19,3 @@ def mergingData():
     df_total = pd.merge(df1_close, df2_close, how='outer', on='Date')
 
     return df_total
-
-def savingPicture():
-    df = mergingData()
-    
-    df.plot()
-    plt.show()
-    
-savingPicture()
